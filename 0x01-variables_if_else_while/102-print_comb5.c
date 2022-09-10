@@ -11,28 +11,21 @@ int main(void)
 
 	int b;
 
-	int c;
-
-	int d;
-
-	for (a = 0; a <= 9; a++)
+	for (a = 0; a <= 100; a++)
 	{
-		for (b = 0; b <= 8; b++)
+		for (b = 0; b <= 100; b++)
 		{
-			for (c = 0; c <= 9; c++)
+			if (a < b)
 			{
-				for (d = 1; d <= 9; d++)
+				putchar((a / 10) + 48);
+				putchar((a % 10) + 48);
+				putchar(' ');
+				putchar((b / 10) + 48);
+				putchar((b % 10) + 48);
+				if (a != 98 || d != 99)
 				{
-					putchar(a + '0');
-					putchar(b + '0');
+					putchar(',');
 					putchar(' ');
-					putchar(c + '0');
-					putchar(d + '0');
-					if (c != 9 || d != 9)
-					{
-						putchar(',');
-						putchar(' ');
-					}
 				}
 			}
 		}
