@@ -29,7 +29,7 @@ int main(void)
 					putchar(c + '0');
 					putchar(d + '0');
 					if (c != 9 || d != 9)
-					{		
+					{
 						putchar(',');
 						putchar(' ');
 					}
@@ -40,4 +40,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
