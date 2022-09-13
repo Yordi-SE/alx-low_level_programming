@@ -19,7 +19,7 @@ int print_last_digit(int n)
 	else if (n < -9 && n > INT_MIN)
 		result = (n * (-1)) % 10;
 	else if (n == INT_MIN)
-		result = INT_MIN % 10;
+		result = 0;
 	else
 		result = n % 10;
 	_putchar(result + '0');
