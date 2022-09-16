@@ -10,9 +10,9 @@ int main(void)
 {
 	long int i = 612852475143;
 
-	int r;
+	long int r;
 
-	int result;
+	long int result;
 
 	for (r = 3; r < i; r++)
 	{
@@ -21,7 +21,7 @@ int main(void)
 		if ((i % r == 0) && (r % 2 != 0))
 			result = r;
 	}
-	printf("%d", result);
+	printf("%ld", result);
 	putchar('\n');
 	return (0);
 }
