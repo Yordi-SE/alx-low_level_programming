@@ -1,6 +1,6 @@
-#include "main.h"
 #include <limits.h>
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * main - Entry
  *
@@ -8,20 +8,20 @@
  */
 int main(void)
 {
-	long int i = 612852475143;
+#define NUM 6128
 
-	long int r;
+	unsigned long r;
 
-	long int result;
+	unsigned long result;
 
-	for (r = 3; r < i; r++)
+	for (r = 3; r < NUM; r++)
 	{
-		if (i % r != 0)
+		if (NUM % r != 0)
 			continue;
-		if ((i % r == 0) && (r % 2 != 0))
+		if ((NUM % r == 0) && (r % 2 != 0))
 			result = r;
 	}
-	printf("%ld", result);
+	printf("%lu", result);
 	putchar('\n');
 	return (0);
 }
