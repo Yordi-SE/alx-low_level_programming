@@ -23,7 +23,7 @@ void print_rev(char *s)
 	for (i = result - 1; i >= 0; i--)
 	{
 		r = *(s + i);
-		if(r != '\0')
+		if (r != '\0')
 			_putchar(r);
 	}
 	_putchar('\n');
