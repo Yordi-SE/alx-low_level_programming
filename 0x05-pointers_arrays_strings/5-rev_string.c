@@ -34,7 +34,7 @@ void rev_string(char *s)
 	{
 		for (k = m - 1; k < m; k++)
 		{
-			if (tmp2 == tmp)
+			if (k > j)
 				break;
 			tmp2 = *(s + k);
 			tmp = *(s + j);
