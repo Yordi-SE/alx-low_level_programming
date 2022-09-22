@@ -10,6 +10,8 @@ void puts_half(char *str)
 {
 	int j;
 
+	int x;
+
 	int i = 1;
 
 	int result = 0;
@@ -22,9 +24,10 @@ void puts_half(char *str)
 		r = *(str + i);
 		i++;
 		}
+	x = result - 1;
 	for (j = 0; *(str + j) != '\0'; j++)
 	{
-		if (j >= (result / 2))
+		if (j > (x / 2))
 			_putchar(*(str + j));
 	}
 	_putchar('\n');
