@@ -22,6 +22,8 @@ void rev_string(char *s)
 
 	char r = *s;
 
+	char tmp2;
+
 	while
 		(r != '\0') {
 		result++;
@@ -32,13 +34,13 @@ void rev_string(char *s)
 	{
 		for (k = m - 1; k < m; k++)
 		{
-			if (*(s + j) == *(s + k))
+			if (tmp2 == tmp)
 				break;
+			tmp2 = *(s + k);
 			tmp = *(s + j);
-			*(s + j) = *(s + k);
 			*(s + k) = tmp;
+			*(s + j) = tmp2;
 		}
 		m++;
 	}
-	putchar('\n');
 }
