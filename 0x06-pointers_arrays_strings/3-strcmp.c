@@ -7,20 +7,71 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int r;
+	int h;
 
-	int i;
+	int k;
 
-	int m = 0;
+	int j;
 
-	for (i = 0; (s1[i] != '\0') || (s2[i] != '\0'); i++)
+	int w[2];
+
+	int m = _strlen(s1);
+
+	int n = _strlen(s2);
+
+	int l = 0;
+
+	if (m < n)
 	{
-		if (s1[i] != s2[i])
-			m++;
+		for (j = 0; j <= m; j++)
+		{
+			if (s1[j] == s2[j])
+				h = 0;
+			else if (s1[j] != s2[j])
+			{
+				w[l] = j;
+				l = 1;
+			}
+		}
 	}
-	if (m == 0)
-		r = 0;
-	else
-		r = ((s1[0] - '0') - (s2[0] - '0'));
-	return (r);
+	if (m >= n)
+	{
+		for (k = 0; k <= n; k++)
+		{
+			if (s1[k] == s2[k])
+				h = 0;
+			else if (s1[k] != s2[k])
+			{
+				w[l] = k;
+				l = 1;
+			}
+		}
+	}
+	if (l == 1)
+		h = ((s1[w[0]] - '0') - (s2[w[0]] - '0'));
+	return (h);
+}
+
+/**
+ * _strlen - return the length of a string
+ *
+ * @s: pointer to string
+ *
+ * Return: int
+ */
+int _strlen(char *s)
+{
+	int i = 1;
+
+	int result = 0;
+
+	char r = *s;
+
+	while
+		(r != '\0') {
+		result++;
+		r = *(s + i);
+		i++;
+		}
+	return (result);
 }
