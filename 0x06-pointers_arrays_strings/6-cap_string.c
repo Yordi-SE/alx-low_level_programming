@@ -37,6 +37,8 @@ char *cap_string(char *str)
 					continue;
 			}
 		}
+		if (str[i] == '\t')
+			str[i] = ' ';
 	}
 	return (str);
 }
