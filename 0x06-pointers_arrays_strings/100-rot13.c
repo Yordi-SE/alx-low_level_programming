@@ -1,43 +1,32 @@
 #include "main.h"
+
 /**
- * rot13 - rot by 13 places
- * @str: string
+ * rot13 - Encodes a string using rot13.
+ * @str: The string
+ *
  * Return: char
  */
 char *rot13(char *str)
 {
-	char s[53] = {'a', 'b', 'c',
-		'd', 'e', 'f', 'g',
-		'h', 'i', 'j', 'k', 'l',
-		'm', 'n', 'o', 'p',
-		'q', 'r', 's', 't', 'u',
-		'v', 'w', 'x', 'y', 'z',
-		'A', 'B', 'C',
-		'D', 'E', 'F', 'G',
-		'H', 'I', 'J', 'K',
-		'L', 'M', 'N', 'O', 'P',
-		'Q', 'R', 'S', 'T', 'U',
-		'V', 'W', 'X', 'Y', 'Z'};
-	int tmp;
+	int j;
 
-	char tmp3;
+	int i = 0;
 
-	int tmp2;
+	char s[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-	for (i = 0; i < y; i++)
+	char d[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	while (*(str + i))
 	{
-		for (j = 0; j < 52; j++)
+		for (j = 0; j <= 52; j++)
 		{
-			if (str[i] == s[j] && j >= 36)
+			if (*(str + i) == s[j])
 			{
-				tmp = (s[f[l]][j] - '0');
-				tmp2 = tmp + 13;
-				tmp3 = tmp2 + '0';
-				str[i] = tmp3;
+				*(str + i) = d[j];
+				break;
 			}
-			else
-
 		}
+		i++;
 	}
 	return (str);
 }
