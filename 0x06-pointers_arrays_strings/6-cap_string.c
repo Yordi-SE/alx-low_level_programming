@@ -16,7 +16,7 @@ char *cap_string(char *str)
 
 	int j;
 
-	char st[14] = {' ', '\n', '\t', ',', ';', '.', '!',
+	char st[13] = {' ', '\n', '\t', ',', ';', '.', '!',
 		'?', '\"', '(', ')', '{', '}'};
 
 	int y = _strlen(str);
@@ -37,8 +37,6 @@ char *cap_string(char *str)
 					continue;
 			}
 		}
-		if (str[i] == '\t')
-			str[i] = ' ';
 	}
 	return (str);
 }
