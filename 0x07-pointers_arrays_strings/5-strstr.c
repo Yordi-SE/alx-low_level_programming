@@ -7,25 +7,36 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int y;
+	int l;
 
 	int m;
 
 	int u = _strlen(haystack);
 
+	int o = _strlen(needle);
+
+	int j;
+
 	for (m = 0; m < u; m++)
 	{
-		if (haystack[m] == needle[0])
+		for (j = 0; j < o; j++)
 		{
+		
+			if (haystack[m] == needle[j])
+		
+			{
+			
+				l = j;
+		
+			}
+			else
+			{
+				l = 0;
+			}
+		}
+		if ( l == (o - 1))
 			break;
-		}
-		else
-		{
-			y = m;
-		}
 	}
-	if (y == u - 1)
-		return (NULL);
 	return ((haystack + m));
 }
 #include "main.h"
