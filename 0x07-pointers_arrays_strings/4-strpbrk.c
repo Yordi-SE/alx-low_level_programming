@@ -20,9 +20,9 @@ char *_strpbrk(char *s, char *accept)
 
 	int u = _strlen(s);
 
-	for (m = 0; s[m] != '\0'; m++)
+	for (m = 0; m <= u; m++)
 	{
-		for (j = 0; accept[j] != '\0'; j++)
+		for (j = 0; j <= o; j++)
 		{
 			if (s[m] == accept[j])
 			{
@@ -37,7 +37,7 @@ char *_strpbrk(char *s, char *accept)
 		if (s[m] == accept[j])
 			break;
 	}
-	if ((l == o - 1) && (y == u - 1))
+	if ((l == o) && (y == u))
 		return (NULL);
 	return ((s + m));
 }
