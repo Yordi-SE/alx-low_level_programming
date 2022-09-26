@@ -33,7 +33,7 @@ char *_strchr(char *s, char c)
 		else
 			l++;
 	}
-	if (l == result)
+	if (l == result - 1)
 		return (NULL);
 	return ((s + m));
 }
