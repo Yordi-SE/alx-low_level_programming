@@ -31,6 +31,8 @@ unsigned int _strspn(char *s, char *accept)
 			break;
 		}
 	}
+	if (m != u - 1)
+		return (0);
 	return (i);
 }
 #include "main.h"
