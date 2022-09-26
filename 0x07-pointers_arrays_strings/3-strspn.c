@@ -21,14 +21,13 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] != accept[j])
 			{
-				m++;
+				m = j;
 			}
 			else if (s[i] == accept[j])
-				m = 1;
+				break;
 		}
-		if (m == u)
+		if (m == u - 1)
 		{
-			i = i + 1;
 			break;
 		}
 	}
