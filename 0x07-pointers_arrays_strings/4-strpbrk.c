@@ -27,8 +27,8 @@ char *_strpbrk(char *s, char *accept)
 			else
 				l = j;
 		}
-	if (s[m] == accept[j])
-		break;
+		if (s[m] == accept[j])
+			break;
 	}
 	if (l == o - 1)
 		return (NULL);
