@@ -24,7 +24,7 @@ char *_strchr(char *s, char c)
 		r = *(s + i);
 		i++;
 		}
-	for (m = 0; m < result; m++)
+	for (m = 0; m <= result; m++)
 	{
 		if (s[m] == c)
 		{
@@ -33,7 +33,7 @@ char *_strchr(char *s, char c)
 		else
 			l++;
 	}
-	if (l == result - 1)
+	if (l == result)
 		return (NULL);
 	return ((s + m));
 }
