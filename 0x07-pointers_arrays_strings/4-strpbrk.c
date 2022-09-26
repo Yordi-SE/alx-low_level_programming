@@ -2,7 +2,7 @@
 /**
  * _strpbrk - locates a character in a string.
  * @s: character string
- * @c: character to be located
+ * @accept: accept
  * Return: c
  */
 char *_strpbrk(char *s, char *accept)
