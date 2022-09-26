@@ -14,6 +14,10 @@ char *_strpbrk(char *s, char *accept)
 
 	int l;
 
+	int u = _strlen(s);
+
+	int o = _strlen(accept);
+
 	for (m = 0; s[m] != '\0'; m++)
 	{
 		for (j = 0; accept[j] != '\0'; j++)
@@ -25,8 +29,34 @@ char *_strpbrk(char *s, char *accept)
 			else
 				l++;
 		}
-		if (s[m] == accept[j])
-			break;
+	if (s[m] == accept[j])
+		break;
 	}
+	if (l == u * o)
+		return (NULL);
 	return ((s + m));
+}
+#include "main.h"
+/**
+ * _strlen - return the length of a string
+ *
+ * @s: pointer to string
+ *
+ * Return: int
+ */
+int _strlen(char *s)
+{
+	int i = 1;
+
+	int result = 0;
+
+	char r = *s;
+
+	while
+		(r != '\0') {
+		result++;
+		r = *(s + i);
+		i++;
+		}
+	return (result);
 }
