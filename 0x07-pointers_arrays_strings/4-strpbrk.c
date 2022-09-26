@@ -10,11 +10,15 @@ char *_strpbrk(char *s, char *accept)
 
 	int j;
 
+	int y;
+
 	int m;
 
 	int l;
 
 	int o = _strlen(accept);
+
+	int u = _strlen(s);
 
 	for (m = 0; s[m] != '\0'; m++)
 	{
@@ -25,12 +29,15 @@ char *_strpbrk(char *s, char *accept)
 				break;
 			}
 			else
+			{
 				l = j;
+				y = m;
+			}
 		}
 		if (s[m] == accept[j])
 			break;
 	}
-	if (l == o - 1)
+	if ((l == o - 1) && (y == u - 1))
 		return (NULL);
 	return ((s + m));
 }
