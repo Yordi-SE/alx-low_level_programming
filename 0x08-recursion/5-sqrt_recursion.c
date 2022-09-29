@@ -8,7 +8,7 @@
 */
 int is_square_root(int m, int i)
 {
-	if ((i * i ) == m)
+	if ((i * i) == m)
 	{
 		return (i);
 	}
