@@ -33,7 +33,7 @@ int _atoi(char *s)
 	}
 	if (m == y - 1)
 		return (0);
-	l = (s - '0');
+	l = (*s - '0');
 	return (l);
 }
 #include "main.h"
