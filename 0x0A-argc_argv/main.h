@@ -36,3 +36,4 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 char *is_revers(char *s, int r);
 #include <stdlib.h>
+#include <string.h>
