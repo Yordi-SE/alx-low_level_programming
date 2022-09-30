@@ -15,24 +15,25 @@ int main(int argc, char *argv[])
 
 	int tmp;
 
-	for (j = 1; j < argc; j++)
+	if (argc != 1)
 	{
-		if (atoi(argv[j]) == 0 && strcmp(argv[j], "0") != 0)
+		for (j = 1; j < argc; j++)
 		{
-			printf("%s\n", "Error");
-			return (1);
+			if (atoi(argv[j]) == 0 && strcmp(argv[j], "0") != 0)
+			{
+				printf("%s\n", "Error");
+				return (1);
+			}
+		}
+		for (i = 0; i < argc - 1; i++)
+		{
+			tmp = tmp2 + atoi(argv[i + 1]);
+			tmp2 = tmp;
 		}
 	}
-	for (i = 0; i < argc - 1; i++)
-	{
-		if (argc == 1)
-		{
-			printf("%c\n", '0');
-			break;
-		}
-		tmp = tmp2 + atoi(argv[i + 1]);
-		tmp2 = tmp;
-	}
-	printf("%d\n", tmp2);
+	if (argc == 1)
+		printf("%d\n", 0);
+	if (argc != 1)
+		printf("%d\n", tmp2);
 	return (0);
 }
