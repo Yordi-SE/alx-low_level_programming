@@ -19,22 +19,23 @@ char *_strstr(char *haystack, char *needle)
 
 	for (m = 0; m < u; m++)
 	{
+		
 		for (j = 0; j < o; j++)
 		{
-		
 			if (haystack[m] == needle[j])
-		
 			{
-			
-				l = j;
-		
+
+				if (l >= j && j != 0)
+					break;
+				else
+					q[j] = j;
 			}
 			else
 			{
-				l = 0;
+				continue;
 			}
-		}
-		if ( l == (o - 1))
+		if (l >= j)
+		if (l == (o - 1))
 			break;
 	}
 	return ((haystack + m));
