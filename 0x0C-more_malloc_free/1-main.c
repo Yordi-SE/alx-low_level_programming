@@ -11,7 +11,7 @@ int main(void)
 {
     char *concat;
 
-    concat = string_nconcat(NULL, NULL, 233);
+    concat = string_nconcat("lemma\t\t\t\t", "Lemmawork MOLLa", 9);
     printf("%s\n", concat);
     free(concat);
     return (0);
