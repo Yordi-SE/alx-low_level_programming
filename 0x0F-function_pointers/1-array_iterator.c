@@ -12,9 +12,25 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t i;
 
+	int *q;
+
+	int *p;
+
 	if (action)
 	{
-		for (i = 0; i < size; i++)
-			action(array[i]);
+		q = array;
+		for (i = 0, q = q; i < size; i++, q++)
+		{
+			p = q;
+			if ((q + 1) - q == 1)
+			{
+				action(array[i]);
+				q = p;
+			}
+			else if (q - (q - 1) == 1)
+				action(array[i]);
+			else
+				break;
+		}
 	}
 }
