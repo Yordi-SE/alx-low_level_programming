@@ -41,6 +41,7 @@ int is_palindrome(char *s);
 char *is_revers(char *s, int r);
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
 char *create_array(unsigned int size, char c);
 char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
