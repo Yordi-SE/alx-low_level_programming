@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 
 	while
-		(*(format + j) != '\0') {
+		(format && *(format + j) != '\0') {
 			switch (*(format + j))
 			{
 				case 'c':
