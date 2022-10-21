@@ -7,8 +7,6 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	int i = 0;
-
 	list_t *first;
 
 	first = (list_t *) malloc(sizeof(list_t));
@@ -24,10 +22,22 @@ list_t *add_node(list_t **head, const char *str)
 	else
 	{
 		(*head)->str = strdup(str);
-		while
-			((*head)->str[i] != '\0')
-				i++;
-		(*head)->len = i;
+		(*head)->len = string_length(str);
 	}
 	return (*head);
+}
+/**
+  * string_length - finds the length of a string.
+  * Return: length of c.
+  * @pointer: pointer.
+  */
+int string_length(const char *pointer)
+{
+	int c = 0;
+
+	while (*(pointer + c) != '\0')
+	{
+		c++;
+	}
+	return (c);
 }
