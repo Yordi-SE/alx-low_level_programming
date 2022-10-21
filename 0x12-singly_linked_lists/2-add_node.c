@@ -16,11 +16,19 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	first->next = *head;
 	*head = first;
-	(*head)->str = strdup(str);
+	if (str == NULL)
+	{
+		(*head)->str = NULL;
+		(*head)->len = 0;
+	}
+	else
+	{
+		(*head)->str = strdup(str);
+		while
+			((*head)->str[i] != '\0')
+				i++;
+		(*head)->len = i;
+	}
 	first = first->next;
-	while
-		((*head)->str[i] != '\0')
-			i++;
-	(*head)->len = i;
 	return (first);
 }
