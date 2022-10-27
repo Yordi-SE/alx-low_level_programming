@@ -14,7 +14,7 @@ unsigned int binary_to_uint(const char *b)
 
 	unsigned int m = 0;
 
-	if (b == NULL)
+	if (b == NULL || i == 0)
 		return (0);
 	for (j = i - 1; j >= 0; j--)
 	{
