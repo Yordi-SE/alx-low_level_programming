@@ -64,7 +64,7 @@ unsigned int mul(unsigned int n)
 {
 	unsigned int h = 2;
 
-	int i;
+	unsigned int i;
 
 	if (n == 0)
 		return (1);
