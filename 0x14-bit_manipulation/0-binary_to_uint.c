@@ -12,7 +12,7 @@ unsigned int binary_to_uint(const char *b)
 
 	unsigned int h = 0;
 
-	int m = 0;
+	unsigned int m = 0;
 
 	if (b == NULL)
 		return (0);
@@ -60,9 +60,9 @@ int _strlen(const char *s)
  * @n: number
  * Return: int
  */
-int mul(int n)
+unsigned int mul(unsigned int n)
 {
-	int h = 2;
+	unsigned int h = 2;
 
 	int i;
 
