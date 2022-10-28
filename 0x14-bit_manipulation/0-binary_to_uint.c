@@ -24,7 +24,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 		else if (b[j] == '1')
 		{
-			h = h + (mul(m));
+			h = h + (mult(m));
 			m++;
 		}
 		else
@@ -60,7 +60,7 @@ int _strlen(const char *s)
  * @n: number
  * Return: int
  */
-unsigned int mul(unsigned int n)
+unsigned int mult(unsigned int n)
 {
 	unsigned int h = 2;
 
