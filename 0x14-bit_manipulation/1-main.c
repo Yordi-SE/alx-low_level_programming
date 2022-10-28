@@ -8,6 +8,7 @@
  */
 int main(void)
 {
+	int i;
     print_binary(0);
     printf("\n");
     print_binary(1);
@@ -23,6 +24,13 @@ int main(void)
     print_binary(75);
     printf("\n");
     print_binary(137);
+    printf("\n");
+    for (i = 0; i <= 20; i++)
+    {
+	    print_binary(i);
+	    printf("\n");
+    }
+    print_binary(100);
     printf("\n");
     return (0);
 }

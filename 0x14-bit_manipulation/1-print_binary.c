@@ -8,7 +8,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned int m;
 
-	unsigned int s;
+	unsigned int s = 0;
 
 	unsigned int i;
 
@@ -43,6 +43,7 @@ void print_binary(unsigned long int n)
 		}
 		m = s;
 	}
+	((t == 4) && (s != 0)) ? (unsigned long int) _putchar(0 + '0') : t;
 	if (t != 1)
 		_putchar(0 + '0');
 }
