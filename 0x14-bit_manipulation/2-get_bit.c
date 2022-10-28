@@ -20,7 +20,7 @@ int get_bit(unsigned long int n, unsigned int index)
 			n = n / 2;
 			i++;
 		}
-	arry = malloc(sizeof(int) * (i + 1));
+	arry = malloc(sizeof(int) * (i));
 	if (arry == NULL)
 		return (-1);
 	l = m % 2;
@@ -32,7 +32,7 @@ int get_bit(unsigned long int n, unsigned int index)
 			l = m % 2;
 			i++;
 		}
-	if (index > i)
+	if (index > (i - 1))
 		return (-1);
 	l = arry[index];
 	free(arry);
