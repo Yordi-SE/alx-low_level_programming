@@ -43,9 +43,9 @@ void print_binary(unsigned long int n)
 		}
 		m = s;
 	}
-	((t > 2) && (s != 0)) ? (unsigned long int) _putchar(0 + '0') : t;
-	if (t != 1)
-		_putchar(0 + '0');
+	for (i = 1; i < s; i++)
+		((t > 2) && (s != 0)) ? (unsigned long int) _putchar(0 + '0') : t;
+	(t != 1) ? (unsigned long int) _putchar(0 + '0') : t;
 }
 /**
  * ret - return exponent value

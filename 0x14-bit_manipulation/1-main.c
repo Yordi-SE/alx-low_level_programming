@@ -25,7 +25,7 @@ int main(void)
     printf("\n");
     print_binary(137);
     printf("\n");
-    for (i = 0; i <= 20; i++)
+    for (i = 20; i <= 30; i++)
     {
 	    print_binary(i);
 	    printf("\n");
