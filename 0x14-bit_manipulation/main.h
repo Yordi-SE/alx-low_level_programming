@@ -8,6 +8,7 @@ int _strlen(const char *s);
 unsigned long int mul(unsigned int n);
 void print_binary(unsigned long int n);
 unsigned int mult(unsigned int n);
+int get_bit(unsigned long int n, unsigned int index);
 unsigned int ret(unsigned long int n);
 unsigned long int _ret(unsigned long int n);
 int _putchar(char c);
