@@ -43,7 +43,7 @@ void print_binary(unsigned long int n)
 		}
 		m = s;
 	}
-	((t == 4) && (s != 0)) ? (unsigned long int) _putchar(0 + '0') : t;
+	((t > 2) && (s != 0)) ? (unsigned long int) _putchar(0 + '0') : t;
 	if (t != 1)
 		_putchar(0 + '0');
 }
