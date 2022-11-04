@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * read_textfile - reads a text file and prints it to the posix standard output.
+ * read_textfile - reads a text file and
+ * prints it to the posix standard output.
  * @filename: name  of the file
  * @letters: the number ot letters it should read and print
  * Return: ssize_t
